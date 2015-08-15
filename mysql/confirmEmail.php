@@ -1,4 +1,6 @@
 <?php 
+	//Sending confirmation email to user using php mail function
+	
 	$uniqueKey = md5(uniqid(rand()));
 	$headers = "From: ". strip_tags($email) ."\r\n";
 	$headers = "Reply-to: " . strip_tags($email). "\r\n";
