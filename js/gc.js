@@ -1,4 +1,3 @@
-//navigator.geolocation.getCurrentPosition(getWeather)
 
 
 $(document).ready(function (){
@@ -13,20 +12,24 @@ $(document).ready(function (){
   $('[data-toggle="popover"]').popover()
 	});
 	if ($.cookie("firstTime") ==="true") {
-		$("#notify-msg").html('<a id="clear-grades href="google.com">To Clear Example Click Here</a>');
+		$("#notify-msg").html('<a id="clear-grades>To Clear Example Click Here</a>');
 		$("#notify").fadeIn(4000);
 		$("#notify-msg").addClass("");
 	}
 	for (var i = 1; i <= $("#p-groups").children().length; i++) {
 		updatePercEach(i);
 	}
+	$("#p-groups").find(".name").each(function () {
+		updateNames($(this));
+	});
 
 	if(!isMobileDevice()){	 
 		$("#pg-list>table").popover("show");
 		$("#pg-table>table").popover("show");
 	} 
+$("#class-name>input").select();
 })();	
-
+//end setup
 
 
 
@@ -38,7 +41,6 @@ $(window).resize(function (){
 	changeNav(width);
 });
 
-$("#class-name>input").select();
 
 $("#class-name>input").blur(function(){
 	if ($(this).val()=="") {
@@ -263,9 +265,7 @@ $('body').scrollspy({ target: '#spying-scroll' });
 
 
 
-$("#p-groups").find(".name").each(function () {
-	updateNames($(this));
-});
+
 
 //sign in or up or out
 $signupForm = [false,false,false];
