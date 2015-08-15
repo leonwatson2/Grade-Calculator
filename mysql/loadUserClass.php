@@ -1,4 +1,11 @@
 <?php
+	/*Loads class specified by user by creating an array 
+	*	object that will be passed to javascript
+	*	and parse into an array that javascript
+	* 	uses to save values into cookies
+	*/
+	
+	
 	session_start();
 	include("http://grdcalc.com/inc/functions.php");
 	include("server.php");
