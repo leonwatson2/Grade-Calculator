@@ -1,5 +1,6 @@
 <?php
-session_start();
+	//Setting user class specified to null
+	session_start();
 	include("server.php");
 	$num = $_POST['num'];
 
