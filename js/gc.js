@@ -2,7 +2,8 @@
 
 $(document).ready(function (){
 
-// Set up for page.
+/* Set up for page. */
+
 (function(){
 	changeNav($(window).width);
 	updateFinalPerc();
@@ -29,7 +30,7 @@ $(document).ready(function (){
 	} 
 $("#class-name>input").select();
 })();	
-//end setup
+/*end setup*/
 
 
 
@@ -168,7 +169,7 @@ $("ul.nav-pills li, ul.nav-tabs li").click(function(){
 				tabs[clickedTab.substring(0,4)](Number(clickedTab.substring(4,clickedTab.length)));
 			} else tabs[$(this).attr("id")]();
 		} 
-		//easy
+		
 });
 $("#save-class, #delete-class, #load-class").click(function(){
 	$clicked = $(this).attr("id");
@@ -267,7 +268,8 @@ $('body').scrollspy({ target: '#spying-scroll' });
 
 
 
-//sign in or up or out
+/*sign in or up or out*/
+
 $signupForm = [false,false,false];
 $("#sign-up-form").on("keyup blur", "input",function () {
 	$formPart = $(this).attr("id");
@@ -312,7 +314,7 @@ $("#sign-up-form").submit(function(e){
 			'email': $("#ymail").val(),
 			'pass':$("#pass").val()
 		};
-		// DONT FORGET TO CHANGE THIS
+		/* DONT FORGET TO CHANGE THIS*/
 			$url = "http://grdcalc.com/mysql/newUser.php";
 		$.post($url, post_data, function(e){
 			if(isNaN(parseInt(e))){ 
