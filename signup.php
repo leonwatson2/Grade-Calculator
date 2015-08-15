@@ -1,4 +1,9 @@
-<?php 
+<?php
+
+/*Sign up page for grdcalc.com 
+*
+*/
+
 session_start();
 $userId = $_SESSION["id"];
  if(strlen($_SESSION["name"]) > 3)
