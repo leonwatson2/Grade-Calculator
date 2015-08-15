@@ -1,5 +1,11 @@
 <?php 
-include("server.php");
+	/*Checks to make sure username and 
+	*	email address is not taken already in database.
+	*	if in database returns 3 if not sends confirmation email
+	*
+	*/
+	
+	include("server.php");
 	$name = $_POST["username"];
 	$email = $_POST["email"];
 	$pass = $_POST["pass"];
