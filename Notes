@@ -1,0 +1,17 @@
+Notes
+4/17/15
+Make login case-inscensitive
+Check for multiple usernames when signing up
+Combine has Class and print class
+Change confirm.php
+use cookie to make example 
+Change max width for save class buttons
+
+Work on loadClass in gc_func.js
+
+4/19/15
+put in delete button when saving
+
+4/20/15
+use ajax to load classes
+have monkey loading bar

@@ -1,0 +1,27 @@
+# compress text, html, javascript, css, xml:
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+
+#rewrite codes
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.grdcalc\.com$
+RewriteRule ^/?$ "http\:\/\/grdcalc\.com\/" [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteCond %{HTTP_HOST} ^217\.199\.187\.70
+RewriteRule (.*) http://www.grdcalc.com/$1 [R=301,L]
+
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+ErrorDocument 404 http://grdcalc.com/signup.php
+order deny,allow
